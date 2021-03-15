@@ -1,12 +1,5 @@
 RewriteEngine On
 
-# Redirecionar para HTTPS WC
-RewriteCond %{HTTP:X-Forwarded-Proto} !https
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-RewriteCond %{REQUEST_URI} !^/(img|css|images|js)/
-RewriteRule .* index.php [L]
-
 #Força a utilizar Cache-Control e Expires header
 <IfModule mod_headers.c>
 Header unset ETag
