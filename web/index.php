@@ -19,7 +19,7 @@ if (isset($pagina[2])) {
 }
 
 switch ($page) {
-  case "index":
+  case "teste":
     $ctrl->index();
     break;
   case "login":
