@@ -1,4 +1,6 @@
 <?php
+require '../vendor/autoload.php';
+
 require "controller/homeController.php";
 require "controller/passageiroController.php";
 require "controller/pagamentoController.php";
