@@ -11,9 +11,9 @@ class Query
         */
 
         //COMENTE O CÓDIGO ACIMA SE VOCÊ NÃO FOR O BRUNO E USE O ABAIXO
-        $dsn = "mysql:host=localhost;dbname=reservas";
-        $user = "root";
-        $pass = "123123";
+        $dsn = "mysql:host=us-cdbr-east-03.cleardb.com;dbname=heroku_7ff5524695ed144";
+        $user = "b37b895b6f3913";
+        $pass = "e5c5b0b3";
         
 
         try {
@@ -38,9 +38,9 @@ class Query
         $pass = "";*/
 
         // COMENTE O CÓDIGO ACIMA SE VOCÊ NÃO FOR O BRUNO E USE O ABAIXO
-        $dsn = "mysql:host=localhost;dbname=reservas";
-        $user = "root";
-        $pass = "123123";
+        $dsn = "mysql:host=us-cdbr-east-03.cleardb.com;dbname=heroku_7ff5524695ed144";
+        $user = "b37b895b6f3913";
+        $pass = "e5c5b0b3";
         
 
         try {
