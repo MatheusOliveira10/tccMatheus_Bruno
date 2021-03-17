@@ -1,8 +1,6 @@
 <?php
 
-class Query
-{
-    public function insert($qry)
+    function insert($qry)
     {
         /*SÓ FUNCIONA NO PC DO BRUNO GUIMARAES, NAO DESCOMENTE NEM DELETE
         $dsn = "mysql:host=localhost:3308;dbname=reservas";
@@ -30,7 +28,7 @@ class Query
         }
     }
 
-    public function select($qry)
+    function select($qry)
     {
         /*SÓ FUNCIONA NO PC DO BRUNO GUIMARAES, NAO DESCOMENTE NEM DELETE
         $dsn = "mysql:host=localhost:3308;dbname=reservas";
@@ -54,4 +52,3 @@ class Query
             echo "Erro:" . $e->getMessage();
         }
     }
-}

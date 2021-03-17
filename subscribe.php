@@ -1,9 +1,10 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
+include 'web/model/query.php';
+
 use Workerman\Worker;
 
 $worker = new Worker();
-$query = new Query();
 
 $worker->onWorkerStart = function(){
     $mqtt = new Workerman\Mqtt\Client('mqtt://test.mosquitto.org:1883');
@@ -15,7 +16,7 @@ $worker->onWorkerStart = function(){
         $qry .= "'" . $content . "'";
         $qry .= ")";
 
-        $query->insert($qry);
+        insert($qry);
     };
     $mqtt->connect();
 };
