@@ -9,7 +9,7 @@ $worker = new Worker();
 $worker->onWorkerStart = function(){
     $mqtt = new Workerman\Mqtt\Client('mqtt://test.mosquitto.org:1883');
     $mqtt->onConnect = function($mqtt) {
-        $mqtt->subscribe('mobg/teste');
+        $mqtt->subscribe('mobg/teste', ["qos" => 2]);
     };
     $mqtt->onMessage = function($topic, $content){
         $qry = "INSERT INTO teste(teste) VALUES (";
