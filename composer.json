@@ -4,9 +4,9 @@
     "monolog/monolog": "^1.22",
     "twig/twig": "^2.0",
     "symfony/twig-bridge": "^3",
+    "ext-pcntl": "*",
     "php-mqtt/client": "^1.0",
-    "workerman/mqtt": "^1.1",
-    "ext-pcntl": "*"
+    "workerman/mqtt": "^1.1"
   },
   "require-dev": {
     "heroku/heroku-buildpack-php": "*"
