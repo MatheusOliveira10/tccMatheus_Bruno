@@ -6,7 +6,7 @@
     "symfony/twig-bridge": "^3",
     "php-mqtt/client": "^1.0",
     "workerman/mqtt": "^1.1",
-    "pcntl": "*"
+    "ext-pcntl": "*"
   },
   "require-dev": {
     "heroku/heroku-buildpack-php": "*"
