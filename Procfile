@@ -1,2 +1,2 @@
 web: vendor/bin/heroku-php-apache2 web/
-worker: php subscribe.php
+worker: php subscribe.php start
