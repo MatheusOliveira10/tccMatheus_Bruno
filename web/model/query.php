@@ -26,6 +26,8 @@
         } catch (PDOException $e) {
             echo "Erro:" . $e->getMessage();
         }
+
+        return;
     }
 
     function select($qry)
