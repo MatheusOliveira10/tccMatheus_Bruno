@@ -21,7 +21,7 @@
 
             $stm->execute($qry);
 
-            var_dump($stm->rowCount);
+            return true;
         } catch (PDOException $e) {
             echo "Erro:" . $e->getMessage();
         }
