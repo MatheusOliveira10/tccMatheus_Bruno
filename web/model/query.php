@@ -19,7 +19,7 @@
 
             $stm = $pdo->prepare($qry);
 
-            $stm->execute($qry);
+            // $stm->execute([]);
 
             return true;
         } catch (PDOException $e) {
