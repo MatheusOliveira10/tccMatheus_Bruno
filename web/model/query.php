@@ -19,7 +19,9 @@
 
             $stm = $pdo->prepare($qry);
 
-            $stm->execute();
+            $stm->execute($qry);
+
+            var_dump($stm->rowCount);
         } catch (PDOException $e) {
             echo "Erro:" . $e->getMessage();
         }
