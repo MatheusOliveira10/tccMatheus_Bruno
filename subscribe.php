@@ -12,6 +12,7 @@ $worker->onWorkerStart = function(){
         $mqtt->subscribe('mobg/teste', ["qos" => 2]);
     };
     $mqtt->onMessage = function($topic, $content){
+        echo "oi";
         $qry = "INSERT INTO teste(teste) VALUES (";
         $qry .= "'" . $content . "'";
         $qry .= ")";
