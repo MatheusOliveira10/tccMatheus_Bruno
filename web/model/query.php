@@ -12,7 +12,6 @@
         $dsn = "mysql:host=us-cdbr-east-03.cleardb.com;dbname=heroku_7ff5524695ed144";
         $user = "b37b895b6f3913";
         $pass = "e5c5b0b3";
-        
 
         try {
             $pdo = new PDO($dsn, $user, $pass);
@@ -21,8 +20,6 @@
             $stm = $pdo->prepare($qry);
 
             $stm->execute();
-
-            echo 200;
         } catch (PDOException $e) {
             echo "Erro:" . $e->getMessage();
         }

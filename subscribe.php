@@ -16,6 +16,7 @@ $worker->onWorkerStart = function(){
         $qry = "INSERT INTO teste(teste) VALUES (";
         $qry .= "'" . $content . "'";
         $qry .= ")";
+        var_dump($qry);
 
         insert($qry);
     };
