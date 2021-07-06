@@ -1,7 +1,7 @@
 <?php
 //require "model/query.php";
 
-class reservaController
+class LeituraController
 {
     public function view() 
     {

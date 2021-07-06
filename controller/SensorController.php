@@ -1,6 +1,6 @@
 <?php
 
-class pagamentoController
+class SensorController
 {
 
     public function pagar($request)
