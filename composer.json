@@ -5,7 +5,8 @@
     "twig/twig": "^2.0",
     "symfony/twig-bridge": "^3",
     "php-mqtt/client": "^1.0",
-    "workerman/mqtt": "^1.1"
+    "workerman/mqtt": "^1.1",
+    "nesbot/carbon": "^2.50"
   },
   "require-dev": {
     "heroku/heroku-buildpack-php": "*"

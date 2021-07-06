@@ -1,14 +1,12 @@
 <?php
 
-use PhpMqtt\Client\MqttClient;
 use Models\Query;
-use Models\Helper;
 
 class CulturaController {
   public function index(){
-    $qry = 'SELECT * FROM testes';
+    $qry = 'SELECT * FROM controladores';
 
-    // echo json_encode(["isBrunoGay" => true]);
+    // echo json_encode(["isBrunoGay" => false]);
     echo Query::select($qry);
   }
   

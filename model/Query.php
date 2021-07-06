@@ -33,11 +33,12 @@ class Query
         try {
             $pdo = new PDO(self::$dsn, self::$user, self::$pass);
             $result = $pdo->query($qry);
+
             if(!$result) {
                 \http_response_code(500);
                 echo "Erro na conexão com o banco";
+                die();
             }
-
             $rows = $result->fetchAll(PDO::FETCH_CLASS);
 
             return json_encode($rows);

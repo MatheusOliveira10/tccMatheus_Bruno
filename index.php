@@ -3,8 +3,8 @@ header('Content-Type: application/json');
 
 require __DIR__ . '/vendor/autoload.php';
 
-use Models\Helper;
 include "routes.php";
+include "helpers.php";
 
 if(!isset($routes[$_SERVER['REQUEST_URI']])) {
   http_response_code(404);
@@ -12,5 +12,4 @@ if(!isset($routes[$_SERVER['REQUEST_URI']])) {
   die();
 }
 
-// Helper::dd();
 $routes[$_SERVER['REQUEST_URI']]();
