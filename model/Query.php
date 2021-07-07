@@ -11,7 +11,7 @@ class Query
     protected static $user = "root";
     protected static $pass = "";
    
-    public static function insert($qry) {
+    public static function insertOrUpdate($qry) {
         try {
             $pdo = new PDO(self::$dsn, self::$user, self::$pass);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

@@ -24,13 +24,13 @@ $routes = [
 
         $_SERVER['REQUEST_METHOD'] == 'GET'
             ? $controlador->index()
-            : $controlador->store();
+            : $controlador->store($_POST);
     },
     "/cultura" => function() use ($cultura) {
         verificaMetodo(["GET", "POST"]);
 
         $_SERVER['REQUEST_METHOD'] == 'GET'
             ? $cultura->index()
-            : $cultura->store();
+            : $cultura->store($_POST);
     },
 ];
