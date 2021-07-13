@@ -18,7 +18,7 @@ class Query
 
             $stm = $pdo->prepare($qry);
 
-            // $stm->execute();
+            $stm->execute();
 
             return true;
         } catch (PDOException $e) {
