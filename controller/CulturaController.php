@@ -12,10 +12,12 @@ class CulturaController implements ICRUD {
   }
   
   public function store($request){
+    $ativa = (int)$request->ativa;
+
     $qry = "INSERT INTO culturas(descricao, ativa, created_at, updated_at) VALUES (";
-    $qry .= "'" . $request['descricao'] . "'";
+    $qry .= "'" . $request->descricao . "'";
     $qry .= ",";
-    $qry .= "'" . $request['ativa'] . "'";
+    $qry .= "'" . $ativa . "'";
     $qry .= ",";
     $qry .= "'" . Carbon::now()->toDateTimeString() . "'";
     $qry .= ",";
@@ -27,9 +29,10 @@ class CulturaController implements ICRUD {
 
   public function update($request){
     $agora = Carbon::now()->toDateTimeString();
+    $ativa = (int)$request->ativa;
 
-    $qry = "UPDATE culturas SET descricao = {$request['descricao']}, ativa = {$request['ativa']}, updated_at = $agora";
-    $qry .= " where id = {$request['id']}";
+    $qry = "UPDATE culturas SET descricao = '{$request->descricao}', ativa = {$ativa}, updated_at = '$agora'";
+    $qry .= " where id = {$request->id}";
 
     echo Query::insertOrUpdate($qry); 
   }
@@ -37,7 +40,7 @@ class CulturaController implements ICRUD {
   
   public function delete($request){
     $qry = "DELETE FROM culturas";
-    $qry .= " where id = {$request['id']}";
+    $qry .= " where id = {$request->id}";
 
     echo Query::insertOrUpdate($qry);  
   }
